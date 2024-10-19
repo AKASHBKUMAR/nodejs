@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Galaxy S21",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Samsung Galaxy S21",
+    "Size": "6.2 inches",
+    "Description": "A flagship smartphone with a stunning display and powerful performance."
+  },
+  {
+    "id": 2,
+    "name": "iPhone 13",
+    "RAM": "4GB",
+    "ROM": "256GB",
+    "Model Name": "Apple iPhone 13",
+    "Size": "6.1 inches",
+    "Description": "An advanced smartphone with an impressive camera system and A15 chip."
+  },
+  {
+    "id": 3,
+    "name": "Pixel 6",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Google Pixel 6",
+    "Size": "6.4 inches",
+    "Description": "Offers a pure Android experience with top-notch photography capabilities."
+  },
+  {
+    "id": 4,
+    "name": "OnePlus 9",
+    "RAM": "12GB",
+    "ROM": "256GB",
+    "Model Name": "OnePlus 9",
+    "Size": "6.55 inches",
+    "Description": "A performance-oriented smartphone with a fast charging feature."
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi Mi 11",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Xiaomi Mi 11",
+    "Size": "6.81 inches",
+    "Description": "A powerful device with a vibrant display and excellent battery life."
+  },
+  {
+    "id": 6,
+    "name": "Sony Xperia 5 II",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Sony Xperia 5 II",
+    "Size": "6.1 inches",
+    "Description": "A compact phone with pro-grade photography and video capabilities."
+  },
+  {
+    "id": 7,
+    "name": "Oppo Find X3 Pro",
+    "RAM": "12GB",
+    "ROM": "256GB",
+    "Model Name": "Oppo Find X3 Pro",
+    "Size": "6.7 inches",
+    "Description": "Features a unique design and a 10-bit color display for vivid visuals."
+  },
+  {
+    "id": 8,
+    "name": "Vivo X60 Pro",
+    "RAM": "12GB",
+    "ROM": "256GB",
+    "Model Name": "Vivo X60 Pro",
+    "Size": "6.56 inches",
+    "Description": "Combines stylish design with impressive camera performance."
+  },
+  {
+    "id": 9,
+    "name": "Huawei P40 Pro",
+    "RAM": "8GB",
+    "ROM": "256GB",
+    "Model Name": "Huawei P40 Pro",
+    "Size": "6.58 inches",
+    "Description": "A photography powerhouse with advanced AI features."
+  },
+  {
+    "id": 10,
+    "name": "Realme GT",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Realme GT",
+    "Size": "6.43 inches",
+    "Description": "A budget-friendly flagship with strong performance and fast charging."
+  },
+  {
+    "id": 11,
+    "name": "Asus ROG Phone 5",
+    "RAM": "16GB",
+    "ROM": "512GB",
+    "Model Name": "Asus ROG Phone 5",
+    "Size": "6.78 inches",
+    "Description": "Designed for gamers with a high refresh rate display and massive battery."
+  },
+  {
+    "id": 12,
+    "name": "Nokia 8.3 5G",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Nokia 8.3 5G",
+    "Size": "6.81 inches",
+    "Description": "A versatile 5G phone with a great camera and solid build quality."
+  },
+  {
+    "id": 13,
+    "name": "LG Velvet",
+    "RAM": "6GB",
+    "ROM": "128GB",
+    "Model Name": "LG Velvet",
+    "Size": "6.8 inches",
+    "Description": "A stylish smartphone with a unique design and great multimedia features."
+  },
+  {
+    "id": 14,
+    "name": "Motorola Edge 20",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Motorola Edge 20",
+    "Size": "6.7 inches",
+    "Description": "Offers a smooth display and impressive camera capabilities."
+  },
+  {
+    "id": 15,
+    "name": "ZTE Axon 20",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "ZTE Axon 20",
+    "Size": "6.92 inches",
+    "Description": "The world's first phone with an under-display camera technology."
+  },
+  {
+    "id": 16,
+    "name": "Honor 50",
+    "RAM": "8GB",
+    "ROM": "256GB",
+    "Model Name": "Honor 50",
+    "Size": "6.57 inches",
+    "Description": "Stylish design with strong performance and great camera features."
+  },
+  {
+    "id": 17,
+    "name": "Black Shark 4",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Black Shark 4",
+    "Size": "6.67 inches",
+    "Description": "A gaming phone with impressive hardware and customizable controls."
+  },
+  {
+    "id": 18,
+    "name": "Lenovo Legion Phone Duel 2",
+    "RAM": "12GB",
+    "ROM": "256GB",
+    "Model Name": "Lenovo Legion Phone Duel 2",
+    "Size": "6.92 inches",
+    "Description": "Features a dual cooling system and landscape gaming design."
+  },
+  {
+    "id": 19,
+    "name": "TCL 20 Pro 5G",
+    "RAM": "6GB",
+    "ROM": "256GB",
+    "Model Name": "TCL 20 Pro 5G",
+    "Size": "6.67 inches",
+    "Description": "Affordable 5G smartphone with a stunning display and great audio."
+  },
+  {
+    "id": 20,
+    "name": "Infinix Zero 8",
+    "RAM": "8GB",
+    "ROM": "128GB",
+    "Model Name": "Infinix Zero 8",
+    "Size": "6.85 inches",
+    "Description": "A budget-friendly option with a good camera and large display."
+  }
+]

@@ -4,6 +4,8 @@ const fileSystem = require("fs");
 const PORT = 3000;
 
 const htmlFile = fileSystem.readFileSync("./Templates/index.html","utf-8");
+const products = fileSystem.readFileSync("./Data/data.json","utf-8");
+
 const server = http.createServer((request, response)=>
 {
   const path = request.url;
@@ -30,6 +32,15 @@ const server = http.createServer((request, response)=>
       "content-encoding": "utf-8",
     });
     response.end(htmlFile.replace("{{%CONTENT%}}", "You are in Contact Page"));
+  }
+  else if(path.toLowerCase() === "/product")
+  {
+    response.writeHead(200, {
+      "content-type": "javascript-object",
+      "content-encoding": "utf-8",
+    });
+    response.end("You are in products page");
+    console.log(JSON.parse(products));
   }
   else 
   {
