@@ -9,18 +9,34 @@ const server = http.createServer((request, response)=>
   const path = request.url;
   if(path === '/' || path.toLowerCase() === '/home')
   {
+    response.writeHead(200, {
+      "content-type": "text/html",
+      "content-encoding": "utf-8",
+    });
     response.end(htmlFile.replace("{{%CONTENT%}}", "You are in Home Page"));
   }
   else if(path.toLowerCase() === '/about')
   {
+    response.writeHead(200, {
+      "content-type": "text/html",
+      "content-encoding": "utf-8",
+    });
     response.end(htmlFile.replace("{{%CONTENT%}}", "You are in About Page"));
   }
   else if(path.toLowerCase() === '/contact')
   {
+    response.writeHead(200, {
+      "content-type": "text/html",
+      "content-encoding": "utf-8",
+    });
     response.end(htmlFile.replace("{{%CONTENT%}}", "You are in Contact Page"));
   }
   else 
   {
+    response.writeHead(404, {
+      "Content-type": "text/html",
+      message: "Resource Not Found",
+    });
     response.end(htmlFile.replace("{{%CONTENT%}}", "Error 404 Page"));
   }
 }
