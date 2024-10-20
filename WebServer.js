@@ -10,23 +10,31 @@ const products = JSON.parse(fileSystem.readFileSync("./Data/data.json","utf-8"))
 
 const productListHtml = fileSystem.readFileSync("./Templates/Product-list.html","utf-8");
 
-const productListHtmlArray = products.map((product)=>{
-  let output = productListHtml.replace("{{%IMAGE%}}", product.productImage);
-  output = output.replace("{{%NAME%}}", product.name);
-  output = output.replace("{{%MODELNAME%}}",product.modelName);
-  output = output.replace("{{%MODELNO%}}", product.modelNumber);
-  output = output.replace("{{%SIZE%}}", product.size);
-  output = output.replace("{{%CAMERA%}}", product.camera);
-  output = output.replace("{{%PRICE%}}", product.price);
-  output = output.replace("{{%COLOR%}}", product.color);
-  return output;
-})
+const productDetailsHtml = fileSystem.readFileSync("./Templates/Product-Details.html","utf-8");
 
+
+const replaceHtml = (template, product) =>{
+  let output = template
+    .replace("{{%IMAGE%}}", product.productImage)
+    .replace("{{%NAME%}}", product.name)
+    .replace("{{%MODELNAME%}}", product.modelName)
+    .replace("{{%MODELNO%}}", product.modelNumber)
+    .replace("{{%SIZE%}}", product.size)
+    .replace("{{%CAMERA%}}", product.camera)
+    .replace("{{%PRICE%}}", product.price)
+    .replace("{{%COLOR%}}", product.color)
+    .replace("{{%ID%}}", product.id)
+    .replace("{{%ROM%}}", product.ROM)
+    .replace("{{%DESC%}}", product.Description);
+
+  return output;
+}
 
 
 const server = http.createServer((request, response)=>
 {
   const {query,pathname:path} = url.parse(request.url,true);
+  console.log(query);
   if(path === '/' || path.toLowerCase() === '/home')
   {
     response.writeHead(200, {
@@ -51,14 +59,24 @@ const server = http.createServer((request, response)=>
     });
     response.end(indexHtml.replace("{{%CONTENT%}}", "You are in Contact Page"));
   }
-  else if(path.toLowerCase() === "/product")
+  else if(path.toLowerCase() === "/products")
   {
-    
-    response.writeHead(200, 
+    if(!query.id)
     {
-      "Content-Type": "text/html"
-    });
-    response.end(indexHtml.replace("{{%CONTENT%}}",productListHtmlArray.join(",")));
+      const productListHtmlArray = products.map((prod)=>{return replaceHtml(productListHtml,prod);})
+      response.writeHead(300, {
+        "Content-Type": "text/html"
+      });
+      response.end(indexHtml.replace("{{%CONTENT%}}",productListHtmlArray.join(",")));
+    }
+    else
+    {
+      const productDeatilHtml = replaceHtml(productDetailsHtml,products[query.id]);
+      //response.writeHead(300, {
+      //  "Content-Type": "text/html",
+      //});
+      response.end(indexHtml.replace("{{%CONTENT%}}", productDeatilHtml));
+    }
     
   }
   else 
