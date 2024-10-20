@@ -12,29 +12,14 @@ const productListHtml = fileSystem.readFileSync("./Templates/Product-list.html",
 
 const productDetailsHtml = fileSystem.readFileSync("./Templates/Product-Details.html","utf-8");
 
+const replaceHtml = require("./Modules/replceHtml");
 
-const replaceHtml = (template, product) =>{
-  let output = template
-    .replace("{{%IMAGE%}}", product.productImage)
-    .replace("{{%NAME%}}", product.name)
-    .replace("{{%MODELNAME%}}", product.modelName)
-    .replace("{{%MODELNO%}}", product.modelNumber)
-    .replace("{{%SIZE%}}", product.size)
-    .replace("{{%CAMERA%}}", product.camera)
-    .replace("{{%PRICE%}}", product.price)
-    .replace("{{%COLOR%}}", product.color)
-    .replace("{{%ID%}}", product.id)
-    .replace("{{%ROM%}}", product.ROM)
-    .replace("{{%DESC%}}", product.Description);
 
-  return output;
-}
 
 
 const server = http.createServer((request, response)=>
 {
   const {query,pathname:path} = url.parse(request.url,true);
-  console.log(query);
   if(path === '/' || path.toLowerCase() === '/home')
   {
     response.writeHead(200, {
@@ -72,9 +57,9 @@ const server = http.createServer((request, response)=>
     else
     {
       const productDeatilHtml = replaceHtml(productDetailsHtml,products[query.id]);
-      //response.writeHead(300, {
-      //  "Content-Type": "text/html",
-      //});
+      response.writeHead(300, {
+        "Content-Type": "text/html",
+      });
       response.end(indexHtml.replace("{{%CONTENT%}}", productDeatilHtml));
     }
     
