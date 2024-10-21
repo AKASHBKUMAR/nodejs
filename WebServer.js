@@ -1,17 +1,15 @@
-const http = require("http");
-const fileSystem = require("fs");
-const url = require("url");
+// NODE MODULES
+const http = require("node:http");
+const fileSystem = require("node:fs");
+const url = require("node:url");
 
 const PORT = 3000;
 
+//CUSTOM MODULES
 const indexHtml = fileSystem.readFileSync("./Templates/index.html","utf-8");
-
 const products = JSON.parse(fileSystem.readFileSync("./Data/data.json","utf-8"));
-
 const productListHtml = fileSystem.readFileSync("./Templates/Product-list.html","utf-8");
-
 const productDetailsHtml = fileSystem.readFileSync("./Templates/Product-Details.html","utf-8");
-
 const replaceHtml = require("./Modules/replceHtml");
 
 
@@ -30,18 +28,22 @@ const server = http.createServer((request, response)=>
   }
   else if(path.toLowerCase() === '/about')
   {
+    
     response.writeHead(200, {
       "content-type": "text/html",
       "content-encoding": "utf-8",
     });
+
     response.end(indexHtml.replace("{{%CONTENT%}}", "You are in About Page"));
   }
   else if(path.toLowerCase() === '/contact')
   {
+    
     response.writeHead(200, {
       "content-type": "text/html",
       "content-encoding": "utf-8",
     });
+    
     response.end(indexHtml.replace("{{%CONTENT%}}", "You are in Contact Page"));
   }
   else if(path.toLowerCase() === "/products")
@@ -75,3 +77,4 @@ const server = http.createServer((request, response)=>
 }
 )
 server.listen(PORT,()=>{console.log(`The Server has started in localhost:${PORT}`)});
+
