@@ -1,7 +1,7 @@
 const fileSystem = require("node:fs");
 
 const existingFileData = fileSystem.readFileSync("./Files/input.txt", "utf-8");
-// console.log(existingFileData);
+  
 
 fileSystem.writeFileSync(
   "./Files/write.txt",
